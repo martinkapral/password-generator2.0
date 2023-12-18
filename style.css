@@ -1,0 +1,292 @@
+:root {
+  --clr-primary-green: #4adf86;
+  --clr-button-green: #10b981;
+  --clr-copy-green: #2bba8a53;
+  --clr-password-green: #55f991;
+  --clr-body-bg: #1c1c1c;
+  --clr-button-bg: #273549;
+  --clr-primary-bg: #1f2937;
+  --clr-line-color: #2f3e53;
+  --clr-copy-color: #1d2736d4;
+
+  --clr-secondary-white: #ffffff;
+  --clr-secondary-grey: #d5d4d8;
+
+  --ff-accent: "Inter", sans-serif;
+  --ff-base: "Karla", sans-serif;
+
+  --fw-small: 400;
+  --fw-regular: 500;
+  --fw-bold: 800;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-body-bg);
+  color: var(--clr-secondary-white);
+  flex-shrink: 0;
+}
+
+.container {
+  background-color: var(--clr-primary-bg);
+  width: 500px;
+  height: 600px;
+  border-radius: 20px;
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  padding-left: 52px;
+  padding-right: 52px;
+  padding-top: 100px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lock {
+  display: flex;
+  justify-content: center;
+}
+
+.lock-icon {
+  filter: brightness(0) invert(1);
+
+  width: 60px;
+  height: 60px;
+  margin-top: -90px;
+  margin-bottom: 55px;
+
+  opacity: 0.04;
+}
+
+h1 {
+  font-family: var(--ff-base);
+  font-size: 60px;
+  line-height: 50px;
+  font-weight: var(--fw-bold);
+  margin-top: -60px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.green-text {
+  color: var(--clr-primary-green);
+}
+
+.button {
+  display: inline-flex;
+  padding: 9px 17px 9px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+
+  border-radius: 6px;
+  background: var(--clr-button-green);
+
+  /* shadow/sm */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+  color: var(--white, #fff);
+  /* text-base/leading-6/font-medium */
+  font-family: var(--ff-accent);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--white, #fff);
+
+  font-family: var(--ff-accent);
+  font-size: 16px;
+  font-weight: var(--fw-small);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.lenght-button {
+  padding: 0;
+  width: 45px;
+  height: 45px;
+  color: var(--clr-secondary-white);
+  background: #273549;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--ff-accent);
+  cursor: pointer;
+}
+
+.lenght {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+hr {
+  width: 400px;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--clr-line-color);
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.password {
+  width: 360px;
+  height: 45px;
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 6px;
+  background: #273549;
+
+  color: #55f991;
+
+  text-align: center;
+  font-family: var(--ff-accent);
+  font-size: 16px;
+  padding-top: 6px;
+
+  font-weight: var(--fw-regular);
+  line-height: 32px; /* 200% */
+}
+
+.bot {
+  display: grid;
+  gap: 20px;
+}
+
+#copy-text-btn1 {
+  width: 45px;
+  height: 45px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#copy-text-btn2 {
+  width: 45px;
+  height: 45px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.copy-btn {
+  filter: brightness(0) invert(1);
+  width: 25px;
+  height: 25px;
+}
+
+.copy1 {
+  display: flex;
+}
+
+.copy2 {
+  display: flex;
+}
+
+/* COPIED! msg */
+
+/* .copied-msg1 {
+  display: none;
+}
+
+.copied-msg2 {
+  margin-left: 175px;
+  display: none;
+} */
+
+/* RESPONSIVITY */
+
+@media (max-width: 600px) {
+  body {
+    transform: scale(0.65);
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    transform: scale(0.6);
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Karla:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>password-generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="lock">
+          <img class="lock-icon" src="logo/lock-icon.png" alt="lock-icon" />
+          <img class="lock-icon" src="logo/lock-icon.png" alt="lock-icon" />
+          <img class="lock-icon" src="logo/lock-icon.png" alt="lock-icon" />
+        </div>
+
+        <h1>
+          Password
+          <p class="green-text">Generator</p>
+        </h1>
+
+        <button id="button" class="button" onclick="generatePasswordButton()">
+          Generate password
+        </button>
+        <hr />
+        <h2>Password lenght</h2>
+      </div>
+      <div class="lenght">
+        <button id="lenght6" class="lenght-button" onclick="lenght6()">
+          6
+        </button>
+        <button id="lenght8" class="lenght-button" onclick="lenght8()">
+          8
+        </button>
+        <button id="lenght10" class="lenght-button" onclick="lenght10()">
+          10
+        </button>
+        <button id="lenght12" class="lenght-button" onclick="lenght12()">
+          12
+        </button>
+        <button id="lenght14" class="lenght-button" onclick="lenght14()">
+          14
+        </button>
+        <button id="lenght16" class="lenght-button" onclick="lenght16()">
+          16
+        </button>
+        <button id="lenght18" class="lenght-button" onclick="lenght18()">
+          18
+        </button>
+        <button id="lenght20" class="lenght-button" onclick="lenght20()">
+          20
+        </button>
+      </div>
+
+      <div class="bot">
+        <div class="copy1">
+          <div id="password-1" class="password"></div>
+
+          <button id="copy-text-btn1">
+            <img
+              src="logo/clipboard.png"
+              alt="copy-to-clipboard"
+              class="copy-btn"
+            />
+          </button>
+        </div>
+        <div class="copy2">
+          <div id="password-2" class="password"></div>
+
+          <button id="copy-text-btn2">
+            <img
+              src="logo/clipboard.png"
+              alt="copy-to-clipboard"
+              class="copy-btn"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
