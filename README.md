@@ -1,1 +1,1 @@
-# password-generator2.0
+https://martinkapral.github.io/password-generator2.0/
