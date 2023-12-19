@@ -104,6 +104,7 @@ body {
   padding-left: 26px;
   padding-right: 26px;
   padding-top: 50px;
+  margin-top: 20px;
 }
 
 .top {
@@ -228,7 +229,6 @@ h2 {
   font-family: var(--ff-accent);
   font-size: 16px;
   padding-top: 6px;
-  
 
   font-weight: var(--fw-regular);
   line-height: 32px; /* 200% */
@@ -283,6 +283,24 @@ h2 {
 
 .copy2 {
   display: flex;
+}
+
+.msg-hide {
+  display: none;
+}
+
+.copy-msg {
+  width: 360px;
+  color: var(--clr-secondary-white);
+  font-family: var(--ff-accent);
+  border: 1px solid var(--clr-primary-green);
+  border-radius: 20px;
+
+  padding: 0px;
+  margin-left: 45px;
+  margin-top: 20px;
+
+  text-align: center;
 }
 
 /* COPIED! msg */
