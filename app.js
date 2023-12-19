@@ -105,12 +105,27 @@ let lenghtSixteen = document.getElementById("lenght16");
 let lenghtEighteen = document.getElementById("lenght18");
 let lenghtTwenty = document.getElementById("lenght20");
 
+let copyMsg = document.getElementById("copy-msg");
+
 let passwordLenght12 = 12;
+
+// COPIED MSG
+
+function copiedMessage() {
+  copyMsg.classList.remove("msg-hide");
+  setTimeout(() => {
+    copyMsg.classList.add("msg-hide");
+  }, 2500);
+}
+
+// RANDOM NUMBER
 
 function getRandomCharacter() {
   let randomPassword = Math.floor(Math.random() * characters.length);
   return characters[randomPassword];
 }
+
+// RANDOM PASS
 
 function generateRandomPassword() {
   let randomPassword = "";
@@ -272,7 +287,9 @@ function copyText(htmlElement) {
 }
 document.querySelector("#copy-text-btn1").onclick = function () {
   copyText(document.querySelector("#password-1"));
+  copiedMessage();
 };
 document.querySelector("#copy-text-btn2").onclick = function () {
   copyText(document.querySelector("#password-2"));
+  copiedMessage();
 };
