@@ -1,16 +1,12 @@
 :root {
-  --clr-primary-green: #4adf86;
-  --clr-button-green: #10b981;
-  --clr-copy-green: #2bba8a53;
-  --clr-password-green: #55f991;
-  --clr-body-bg: #1c1c1c;
-  --clr-button-bg: #273549;
-  --clr-primary-bg: #1f2937;
-  --clr-line-color: #2f3e53;
-  --clr-copy-color: #1d2736d4;
+  --clr-primary-green: #9fd3c7;
+  --clr-primary-green-hover: #9fd3c79a;
+  --clr-password: #f76b8a;
 
-  --clr-secondary-white: #ffffff;
-  --clr-secondary-grey: #d5d4d8;
+  --clr-body-bg: #142d4c;
+  --clr-button-bg: #385170;
+
+  --clr-secondary-white: #ececec;
 
   --ff-accent: "Inter", sans-serif;
   --ff-base: "Karla", sans-serif;
@@ -105,9 +101,9 @@ body {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  padding-left: 52px;
-  padding-right: 52px;
-  padding-top: 100px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 50px;
 }
 
 .top {
@@ -124,12 +120,12 @@ body {
 .lock-icon {
   filter: brightness(0) invert(1);
 
-  width: 60px;
-  height: 60px;
-  margin-top: -90px;
-  margin-bottom: 55px;
+  width: 40px;
+  height: 40px;
+  margin-top: -30px;
+  margin-bottom: 20px;
 
-  opacity: 0.04;
+  opacity: 0.1;
 }
 
 h1 {
@@ -139,7 +135,7 @@ h1 {
   font-weight: var(--fw-bold);
   margin-top: -60px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .green-text {
@@ -156,7 +152,7 @@ h1 {
   cursor: pointer;
 
   border-radius: 6px;
-  background: var(--clr-button-green);
+  background: var(--clr-button-bg);
 
   /* shadow/sm */
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
@@ -172,14 +168,27 @@ h1 {
   margin-bottom: 20px;
 }
 
+.button:hover {
+  background: var(--clr-primary-green-hover);
+}
+
+hr {
+  width: 400px;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid var(--clr-button-bg);
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
 h2 {
-  color: var(--white, #fff);
+  color: var(--clr-primary-green);
 
   font-family: var(--ff-accent);
   font-size: 16px;
   font-weight: var(--fw-small);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .lenght-button {
@@ -187,25 +196,20 @@ h2 {
   width: 45px;
   height: 45px;
   color: var(--clr-secondary-white);
-  background: #273549;
+  background: var(--clr-button-bg);
   border: none;
   border-radius: 50px;
   font-family: var(--ff-accent);
   cursor: pointer;
 }
 
+.lenght-button:hover {
+  background: var(--clr-primary-green-hover);
+}
+
 .lenght {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-hr {
-  width: 400px;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid var(--clr-line-color);
-  margin-top: 10px;
   margin-bottom: 50px;
 }
 
@@ -216,14 +220,15 @@ hr {
 
   border: none;
   border-radius: 6px;
-  background: #273549;
+  background: var(--clr-button-bg);
 
-  color: #55f991;
+  color: var(--clr-password);
 
   text-align: center;
   font-family: var(--ff-accent);
   font-size: 16px;
   padding-top: 6px;
+  padding-left: 50px;
 
   font-weight: var(--fw-regular);
   line-height: 32px; /* 200% */
@@ -231,13 +236,15 @@ hr {
 
 .bot {
   display: grid;
+  justify-content: center;
   gap: 20px;
 }
 
 #copy-text-btn1 {
   width: 45px;
   height: 45px;
-  background: none;
+  background: var(--clr-button-bg);
+  box-shadow: -10px 0px 0px 0px var(--clr-button-bg);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -246,7 +253,8 @@ hr {
 #copy-text-btn2 {
   width: 45px;
   height: 45px;
-  background: none;
+  background: var(--clr-button-bg);
+  box-shadow: -10px 0px 0px 0px var(--clr-button-bg);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -256,6 +264,11 @@ hr {
   filter: brightness(0) invert(1);
   width: 25px;
   height: 25px;
+  opacity: 0.6;
+}
+
+.copy-btn:hover {
+  opacity: 1;
 }
 
 .copy1 {
@@ -279,14 +292,26 @@ hr {
 
 /* RESPONSIVITY */
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   body {
-    transform: scale(0.65);
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    transform: scale(0.75);
   }
 }
 
 @media (max-width: 380px) {
   body {
-    transform: scale(0.6);
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    transform: scale(0.5);
   }
 }
