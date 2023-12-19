@@ -241,27 +241,29 @@ h2 {
 }
 
 #copy-text-btn1 {
-  width: 45px;
-  height: 45px;
+  width: inherit;
+  height: inherit;
   background: var(--clr-button-bg);
   box-shadow: -10px 0px 0px 0px var(--clr-button-bg);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   position: absolute;
-  right: 50px;
+  right: 55px;
+  top: 405px;
 }
 
 #copy-text-btn2 {
-  width: 45px;
-  height: 45px;
+  width: inherit;
+  height: inherit;
   background: var(--clr-button-bg);
   box-shadow: -10px 0px 0px 0px var(--clr-button-bg);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   position: absolute;
-  right: 50px;
+  right: 55px;
+  top: 470px;
 }
 
 .copy-btn {
